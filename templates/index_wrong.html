@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html></html>
+<head>
+    <title>User Management System</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/main.css') }}">
+</head>
+
+<body>
+    <table>
+        <tr>
+            <td><h2>Welcome to the User Management System. Please login with your account.</h2><br></td>
+        </tr>
+        <tr>
+            <td><form action="/" method = "POST">
+                <input type="text" name="username" id="username" required="required" autofocus="autofocus">
+                <input type="text" name="password" id="password" required="required">
+                <input type="submit" value="Login">
+            </form></td>
+        </tr>
+        <tr>
+            <td><h5>Wrong password or user doesn't exist!</h5><h3>Don't have an account yet? Create one <a href="/create_account/">here</a>.</h3></td>
+        </tr>
+    </table>
+    <br>
+    <table>
+        <tr>
+            <td>ID</td>
+            <td>Username</td>
+            <td>Password</td>
+            <td>Email Adress</td>
+            <td>Date Created</td>
+        </tr>
+            {% for user in users %}
+            <tr>
+                <td>{{ user.id }}</td>
+                <td>{{ user.username }}</td>
+                <td>{{ user.password }}</td>
+                <td>{{ user.email }}</td>
+                <td>{{ user.date_created }}</td>
+                <td><a href="/delete/{{user.id}}">Delete user</a></td>
+            </tr>
+            {% endfor %}
+    </table>
+    
+    
+</body>
+</html>

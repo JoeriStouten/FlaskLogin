@@ -1,0 +1,17 @@
+body {
+    background-color: #5cdb95;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #edf5e1;
+    text-shadow: 1px 1px #05386b;
+}
+
+table {
+    border-style: solid;
+    border-width: 3px;
+    border-color: #05386b;
+    border-style: dashed;
+    text-align: center;
+    width: 60%;
+    margin-left: 20%;
+    margin-right: 20%;
+}

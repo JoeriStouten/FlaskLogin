@@ -1,0 +1,22 @@
+<html>
+    <head>
+        <title>{{ user.username }}'s Homepage</title>
+        <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/main.css') }}">
+    </head>
+    <body>
+        <table>
+            <tr>
+                <td><h2>Hi, {{ user.username }}. You are succesfully logged in.</h2></tr></td>
+                <td><a href="{{url_for('index')}}">Log out...</a></td>
+        </table>
+        <br>
+        <table>
+            <tr>
+                <td><a href="">Create your first post!</a></td>
+            </tr>x
+        </table>
+        
+        
+
+    </body>
+</html>
